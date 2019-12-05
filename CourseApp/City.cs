@@ -4,11 +4,10 @@ namespace CourseApp
 {
     public class City
     {
-
         private int pop;
 
         public City()
-        : this (0, "Unitiled", "Unnamed")
+        : this(0, "Unitiled", "Unnamed")
         {
         }
 
@@ -18,23 +17,23 @@ namespace CourseApp
             Country = country;
             Name = name;
         }
-        
-        public string Country {get; set;}
 
-        public string Name {get; set;}
+        public string Country { get; set; }
+
+        public string Name { get; set; }
 
         public int Pop
         {
-            get 
+            get
             {
                 return this.pop;
             }
 
             set
             {
-                if(value >=0)
+                if (value >= 0)
                 {
-                    this.pop=value;
+                    this.pop = value;
                 }
                 else
                 {
@@ -43,8 +42,8 @@ namespace CourseApp
             }
         }
 
-    public string View()
-    {
+        public string View()
+        {
         return @"
 ▐▌▐▐▄▄▄▐███▌▄███▄▐▌▌
 ▐██▐█▄█▐▌▌▐▌█▄█▄█▐▌█▌
@@ -52,7 +51,6 @@ namespace CourseApp
 ▐█▄██▐▐▐▌▌▐▌█▄█▄█▐▌▌▌█
 ██████████████████████
 ";
-    }
-        
+        }
     }
 }
