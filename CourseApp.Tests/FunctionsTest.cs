@@ -18,12 +18,12 @@ namespace CourseApp.Tests
 
         [Fact]
         public void TestNormalA()
-        { //Это тоже надо заполнять?
+        { // var NormalA = Functions.TaskA(0.15, 1.37, 0.25);var score = new double[]
         }
 
         [Fact]
         public void TestNormalB()
-        { //И это?
+        {
         }
 
         [Fact]

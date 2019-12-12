@@ -24,7 +24,7 @@ namespace CourseApp.Tests
 ▐▄██▄█▐▐▌▌▐▌█▄█▄█▐▌▌█▌
 ▐█▄██▐▐▐▌▌▐▌█▄█▄█▐▌▌▌█
 ██████████████████████
-         ";  
+         ";
             Assert.Equal(view, item.View());
         }
 
@@ -33,7 +33,7 @@ namespace CourseApp.Tests
         public void TestSetPop()
         {
             var item = new City();
-            item.Pop = 1; //ну как минимум, там живет пользователь
+            item.Pop = 1;
             Assert.Equal(1, item.Pop);
         }
 
@@ -53,6 +53,5 @@ namespace CourseApp.Tests
             item.Pop = -100000;
             Assert.Equal(10, item.Pop);
         }
-
     }
 }
