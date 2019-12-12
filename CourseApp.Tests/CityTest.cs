@@ -10,7 +10,7 @@ namespace CourseApp.Tests
         {
             var item = new City();
             Assert.Equal(0, item.Pop);
-            Assert.Equal("Untiled", item.Country);
+            Assert.Equal("Unitiled", item.Country);
             Assert.Equal("Unnamed", item.Name);
         }
 
@@ -24,7 +24,7 @@ namespace CourseApp.Tests
 ▐▄██▄█▐▐▌▌▐▌█▄█▄█▐▌▌█▌
 ▐█▄██▐▐▐▌▌▐▌█▄█▄█▐▌▌▌█
 ██████████████████████
-         ";
+";
             Assert.Equal(view, item.View());
         }
 
@@ -33,8 +33,8 @@ namespace CourseApp.Tests
         public void TestSetPop()
         {
             var item = new City();
-            item.Pop = 1;
-            Assert.Equal(1, item.Pop);
+            item.Pop = 10;
+            Assert.Equal(10, item.Pop);
         }
 
         [Fact]
@@ -51,7 +51,7 @@ namespace CourseApp.Tests
             var item = new City();
             item.Pop = 1;
             item.Pop = -100000;
-            Assert.Equal(10, item.Pop);
+            Assert.Equal(1, item.Pop);
         }
     }
 }

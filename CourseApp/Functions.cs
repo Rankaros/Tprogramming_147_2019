@@ -7,8 +7,8 @@ namespace CourseApp
     {
         public static double MyFunction(double a, double b, double x)
         {
-            var c = (a + Math.Pow(Math.Tan(b * x), 2)) / (b + (1 / Math.Pow(Math.Tan(a * x), 2)));
-            return c;
+            var y = (a + Math.Pow(Math.Tan(b * x), 2)) / (b + (1 / Math.Pow(Math.Tan(a * x), 2)));
+            return y;
         }
 
         public static List<double> TaskA (
@@ -18,8 +18,8 @@ namespace CourseApp
                                      double xk,
                                      double dx)
         {
-            List<double> = new List<double>((int)((xk - xn) / dx));
-            for (var x = xn; x < xk; x += dx)
+            List<double> y = new List<double>((int)((xk - xn) / dx));
+            for (double x = xn; x < xk; x += dx)
             {
                 y.Add(MyFunction(a, b, x));
             }
@@ -33,7 +33,7 @@ namespace CourseApp
                                  List<double> x)
         {
             List<double> y = new List<double>();
-            for (int i = 0; i < x.Count; i++)
+            for (var i = 0; i < x.Count; i++)
             {
                 y.Add(MyFunction(a, b, x[i]));
             }
@@ -55,14 +55,11 @@ namespace CourseApp
             }
 
             Console.WriteLine("TaskB:");
-            List<double> x = new List<double> {0.2, 0.3, 0.44, 0.6, 0.56 };
-            foreach (var item in TaskB(0.1, 0.5, xB));
+            List<double> x = new List<double> { 0.2, 0.3, 0.44, 0.6, 0.56 };
+            foreach (var item in TaskB(a, b, x))
             {
                 Console.WriteLine($"y = {item}");
             }
-
-            /*var item = new Platypus();
-            Console.WriteLine(item.View());*/
 
             Console.ReadLine();
         }
