@@ -18,13 +18,26 @@ namespace CourseApp
                                      double xk,
                                      double dx)
         {
-            List<double> y = new List<double>((int)((xk - xn) / dx));
-            for (double x = xn; x < xk; x += dx)
+            if (dx > (xk - xn))
             {
-                y.Add(MyFunction(a, b, x));
+                List<double> y = new List<double>();
+                return y;
             }
+            if (xn < xk)
+            {
+                List<double> y = new List<double>();
+                for (double x = xn; x < xk; x += dx)
+                {
+                    y.Add(MyFunction(a, b, x));
+                }
 
-            return y;
+                return y;
+            }
+            else
+            {
+                List<double> y = new List<double>();
+                return y;
+            }
         }
 
         public static List<double> TaskB (

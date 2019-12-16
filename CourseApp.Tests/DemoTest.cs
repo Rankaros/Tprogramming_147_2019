@@ -20,6 +20,17 @@ namespace CourseApp.Tests
         }
 
         [Fact]
+        public void TestEmptyListA()
+        {
+            double a = 0.1;
+            double b = 0.5;
+            double xn = 2.15;
+            double xk = 1.37;
+            double dx = 0.25;
+            Assert.Empty(Functions.TaskA(a, b, xn, xk, dx));
+        }
+
+        [Fact]
         public void TestTaskA()
         {
             double a = 0.1;
@@ -33,6 +44,27 @@ namespace CourseApp.Tests
             {
                 Assert.Equal(expy[i], res[i], 3);
             }
+        }
+
+        [Fact]
+        public void TestXnMoreThenXk()
+        {
+            List<double> res = Functions.TaskA(0.1, 0.5, 1.37, 0.15, 0.25);
+            Assert.Equal(res, new List<double>());
+        }
+
+        [Fact]
+        public void TestXnMoreThenXk()
+        {
+            List<double> res = Functions.TaskA(0.1, 0.5, 1.37, 0.15, 2.0);
+            Assert.Equal(res, new List<double>());
+        }
+
+        [Fact]
+        public void TestEmptyListB()
+        {
+            List<double> x = new List<double>();
+                Assert.Empty(Functions.TaskB(0.1, 0.5, x));
         }
 
         [Fact]
