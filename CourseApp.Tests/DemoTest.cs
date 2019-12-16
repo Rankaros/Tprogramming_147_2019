@@ -54,7 +54,7 @@ namespace CourseApp.Tests
         }
 
         [Fact]
-        public void TestXnMoreThenXk()
+        public void TestDx()
         {
             List<double> res = Functions.TaskA(0.1, 0.5, 1.37, 0.15, 2.0);
             Assert.Equal(res, new List<double>());
