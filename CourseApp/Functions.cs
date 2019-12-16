@@ -23,6 +23,7 @@ namespace CourseApp
                 List<double> y = new List<double>();
                 return y;
             }
+
             if (xn < xk)
             {
                 List<double> y = new List<double>();
